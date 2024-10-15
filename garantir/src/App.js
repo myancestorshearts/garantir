@@ -21,9 +21,6 @@ function App() {
             <li>
               <a href="#ourmission">Our Mission</a>
             </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
           </ul>
         </div>
       </nav>
