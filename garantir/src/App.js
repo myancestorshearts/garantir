@@ -1,85 +1,137 @@
 import React from "react"
-import "../src/style.css"
-import Logo from "../src/Logo.png"
+import "./style.css" // If you need external CSS
 
 function App() {
   return (
     <div>
       {/* Header Section */}
-      <nav>
-        <div className="nav-container">
-          <div class="logo">
-            <img src={Logo} alt="G" />
-          </div>
-          <ul>
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#ourmission">Our Mission</a>
-            </li>
-          </ul>
-        </div>
+      <nav style={styles.navbar}>
+        <ul style={styles.navLinks}>
+          <li>
+            <a href="#home" style={styles.link}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" style={styles.link}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#mission" style={styles.link}>
+              Our Mission
+            </a>
+          </li>
+          <li>
+            <a href="#privacy-policy" style={styles.link}>
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
       </nav>
 
-      {/* Hero Section */}
-      <section className="hero" id="home">
-        <h1>Your Trusted Partner for Home Clean Solutions</h1>
+      {/* Main Content */}
+      <section id="home" style={styles.section}>
+        <h1>Welcome to Our Website</h1>
         <p>
-          We take pride in our attention to detail and commitment to customer
-          satisfaction.
+          We provide great services. Scroll down to read more about our privacy
+          policy.
         </p>
-        <button>Request Service</button>
-        <button>Discover More</button>
       </section>
 
-      {/* Our Mission Section */}
-      <section className="section" id="services">
-        <h2>Our Mission</h2>
-        <div className="section-content">
-          <div>
-            <h3>Customer Satisfaction</h3>
-            <p>
-              We prioritize the needs and preferences of customers, striving to
-              exceed expectations.
-            </p>
-          </div>
-          <div>
-            <h3>Trustworthiness</h3>
-            <p>
-              We build trust by being transparent and reliable in all
-              interactions.
-            </p>
-          </div>
-          <div>
-            <h3>Service on the Go</h3>
-            <p>
-              Our platform connects professionals to side gigs based on their
-              skills.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="section" id="about">
-        <h2>Behind the Company</h2>
+      <section id="about" style={styles.section}>
+        <h2>About Us</h2>
         <p>
-          Explore our core mission and vision that drives us every day. At
-          HomeMaster, we’re not just about cleaning homes, we’re about making a
-          difference in the lives of our clients and professionals.
+          Explore our core mission and vision that drives us every day. We’re
+          not just about providing services, we’re about making a difference in
+          the lives of our clients.
+        </p>
+      </section>
+
+      <section id="mission" style={styles.section}>
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to ensure customer satisfaction by offering top-notch
+          services that meet their needs and preferences.
+        </p>
+      </section>
+
+      {/* Privacy Policy Section */}
+      <section id="privacy-policy" style={styles.privacySection}>
+        <h2>Privacy Policy</h2>
+        <p>
+          This Privacy Policy outlines how we collect, use, and protect your
+          personal information.
+        </p>
+        <h3>Information Collection</h3>
+        <p>
+          We collect personal information such as your name, email address, and
+          other contact details when you interact with our website.
+        </p>
+        <h3>Use of Information</h3>
+        <p>
+          The information we collect is used to improve our services,
+          personalize your experience, and communicate with you regarding
+          updates or offers.
+        </p>
+        <h3>Data Security</h3>
+        <p>
+          We take the security of your data seriously and implement various
+          measures to ensure its protection.
+        </p>
+        <h3>Your Rights</h3>
+        <p>
+          You have the right to access, update, or delete your personal
+          information. If you have any questions about our privacy policy, feel
+          free to contact us.
         </p>
       </section>
 
       {/* Footer */}
-      <footer>
-        <p>© 2024 HomeMaster. All rights reserved.</p>
+      <footer style={styles.footer}>
+        <p>© 2024 Your Company. All rights reserved.</p>
       </footer>
     </div>
   )
+}
+
+const styles = {
+  navbar: {
+    backgroundColor: "#f0f0f0",
+    padding: "10px",
+    position: "sticky",
+    top: 0,
+    zIndex: 1000,
+    borderBottom: "1px solid #ccc",
+  },
+  navLinks: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    listStyleType: "none",
+    margin: 0,
+    padding: 0,
+  },
+  link: {
+    textDecoration: "none",
+    color: "#15604B",
+    fontWeight: "bold",
+  },
+  section: {
+    padding: "40px 20px",
+    textAlign: "center",
+  },
+  privacySection: {
+    padding: "40px 20px",
+    backgroundColor: "#f9f9f9",
+    textAlign: "center",
+  },
+  footer: {
+    backgroundColor: "#15604B",
+    color: "#fff",
+    padding: "20px",
+    textAlign: "center",
+  },
 }
 
 export default App
