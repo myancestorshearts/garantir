@@ -29,7 +29,7 @@ function App() {
           </li>
           {/* New Anchor Link to Open the App */}
           <li>
-            <a href="guaranter://home" style={styles.navButton}>
+            <a href="guaranter://home" style={styles.link}>
               Open the App
             </a>
           </li>
