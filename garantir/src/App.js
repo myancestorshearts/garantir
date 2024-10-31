@@ -2,7 +2,7 @@ import React from "react"
 import "./style.css" // If you need external CSS
 
 const handleOpenApp = () => {
-  const appUrl = "yourappname://home"
+  const appUrl = "guaranter://home"
   const fallbackUrl = "https://www.yourwebsite.com/app-download" // Replace with your actual fallback URL
 
   // Attempt to open the app; fallback if not successful
