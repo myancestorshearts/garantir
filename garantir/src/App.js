@@ -29,7 +29,9 @@ function App() {
           </li>
           {/* New Anchor Link to Open the App */}
           <li>
-            <a href="#open">Open the App</a>
+            <a href="guaranter://home" style={styles.link}>
+              Open the App
+            </a>
           </li>
         </ul>
       </nav>
