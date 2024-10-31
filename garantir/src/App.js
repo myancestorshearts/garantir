@@ -2,11 +2,6 @@ import React from "react"
 import "./style.css" // If you need external CSS
 
 function App() {
-  const handleOpenApp = () => {
-    // Custom URL scheme to open the app (change "guaranter" to your actual scheme)
-    window.location.href = "guaranter://home" // Adjust path (e.g., "home") if needed
-  }
-
   return (
     <div>
       {/* Header Section */}
@@ -32,11 +27,11 @@ function App() {
               Privacy Policy
             </a>
           </li>
-          {/* New Button Link to Open the App */}
+          {/* New Anchor Link to Open the App */}
           <li>
-            <button onClick={handleOpenApp} style={styles.navButton}>
+            <a href="guaranter://home" style={styles.navButton}>
               Open the App
-            </button>
+            </a>
           </li>
         </ul>
       </nav>
@@ -145,6 +140,7 @@ const styles = {
     borderRadius: "5px",
     cursor: "pointer",
     fontWeight: "bold",
+    textDecoration: "none", // Ensures the button appearance
   },
   footer: {
     backgroundColor: "#15604B",
