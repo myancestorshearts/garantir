@@ -3,7 +3,7 @@ import "./style.css" // If you need external CSS
 
 function App() {
   const handleOpenApp = () => {
-    // Custom URL scheme to open the app (change "yourappname" to your actual scheme)
+    // Custom URL scheme to open the app (change "guaranter" to your actual scheme)
     window.location.href = "guaranter://home" // Adjust path (e.g., "home") if needed
   }
 
@@ -31,6 +31,12 @@ function App() {
             <a href="#privacy-policy" style={styles.link}>
               Privacy Policy
             </a>
+          </li>
+          {/* New Button Link to Open the App */}
+          <li>
+            <button onClick={handleOpenApp} style={styles.navButton}>
+              Open the App
+            </button>
           </li>
         </ul>
       </nav>
@@ -90,11 +96,6 @@ function App() {
           information. If you have any questions about our privacy policy, feel
           free to contact us.
         </p>
-
-        {/* Link to Open Mobile App */}
-        <button onClick={handleOpenApp} style={styles.openAppButton}>
-          Open the App
-        </button>
       </section>
 
       {/* Footer */}
@@ -136,15 +137,14 @@ const styles = {
     backgroundColor: "#f9f9f9",
     textAlign: "center",
   },
-  openAppButton: {
-    marginTop: "20px",
-    padding: "10px 20px",
+  navButton: {
+    padding: "8px 15px",
     backgroundColor: "#15604B",
     color: "#fff",
     border: "none",
     borderRadius: "5px",
     cursor: "pointer",
-    fontSize: "16px",
+    fontWeight: "bold",
   },
   footer: {
     backgroundColor: "#15604B",
