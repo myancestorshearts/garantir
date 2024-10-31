@@ -2,6 +2,11 @@ import React from "react"
 import "./style.css" // If you need external CSS
 
 function App() {
+  const handleOpenApp = () => {
+    // Custom URL scheme to open the app (change "yourappname" to your actual scheme)
+    window.location.href = "guaranter://home" // Adjust path (e.g., "home") if needed
+  }
+
   return (
     <div>
       {/* Header Section */}
@@ -85,6 +90,11 @@ function App() {
           information. If you have any questions about our privacy policy, feel
           free to contact us.
         </p>
+
+        {/* Link to Open Mobile App */}
+        <button onClick={handleOpenApp} style={styles.openAppButton}>
+          Open the App
+        </button>
       </section>
 
       {/* Footer */}
@@ -125,6 +135,16 @@ const styles = {
     padding: "40px 20px",
     backgroundColor: "#f9f9f9",
     textAlign: "center",
+  },
+  openAppButton: {
+    marginTop: "20px",
+    padding: "10px 20px",
+    backgroundColor: "#15604B",
+    color: "#fff",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+    fontSize: "16px",
   },
   footer: {
     backgroundColor: "#15604B",
