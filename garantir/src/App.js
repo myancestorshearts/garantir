@@ -29,7 +29,7 @@ function App() {
           </li>
           {/* New Anchor Link to Open the App */}
           <li>
-            <a href="xx">Open the App</a>
+            <a href="#open">Open the App</a>
           </li>
         </ul>
       </nav>
