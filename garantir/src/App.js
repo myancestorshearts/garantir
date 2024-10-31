@@ -5,13 +5,22 @@ const handleOpenApp = () => {
   const appUrl = "guaranter://home"
   const fallbackUrl = "https://www.yourwebsite.com/app-download" // Replace with your actual fallback URL
 
-  // Attempt to open the app; fallback if not successful
-  window.location.href = appUrl
+  // Check if the device is mobile
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 
-  setTimeout(() => {
-    // If app doesn’t open, redirect to the fallback
+  if (isMobile) {
+    // Attempt to open the app URL
+    window.location.href = appUrl
+
+    // Fallback to website if the app doesn't open within 1 second
+    setTimeout(() => {
+      window.location.href = fallbackUrl
+    }, 1000)
+  } else {
+    // Show a message or redirect desktop users directly to the fallback
+    alert("This functionality is available on mobile devices only.")
     window.location.href = fallbackUrl
-  }, 1000)
+  }
 }
 
 function App() {
