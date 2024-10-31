@@ -1,6 +1,19 @@
 import React from "react"
 import "./style.css" // If you need external CSS
 
+const handleOpenApp = () => {
+  const appUrl = "yourappname://home"
+  const fallbackUrl = "https://www.yourwebsite.com/app-download" // Replace with your actual fallback URL
+
+  // Attempt to open the app; fallback if not successful
+  window.location.href = appUrl
+
+  setTimeout(() => {
+    // If app doesn’t open, redirect to the fallback
+    window.location.href = fallbackUrl
+  }, 1000)
+}
+
 function App() {
   return (
     <div>
@@ -29,9 +42,9 @@ function App() {
           </li>
           {/* New Anchor Link to Open the App */}
           <li>
-            <a href="guaranter://home" style={styles.link}>
+            <button onClick={handleOpenApp} style={styles.link}>
               Open the App
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
